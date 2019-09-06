@@ -7,14 +7,16 @@
 int main()
 {
     system("COLOR 1f");
+    // DECLARO VARIABLES
   int numero1;
   int numero2;
   char opcion;
   float resultados;
 
+  //*****MENU DE LA CALCULADORA*****
 
   do{
-  printf("\n**********CALCULADORA**********\n");
+  printf("\n**********CALCULADORA**********\n\n");
   printf("\nIngrese el primer operando: ");
   scanf("%d", &numero1);
 
@@ -55,17 +57,13 @@ int main()
         printf("\nEl resultado de %d * %d = %.2f \n", numero1, numero2, resultados);
         break;
     case 'e' :
-        if(numero1=='0'){
-        printf("\nEl factorial de %d es: 1 \n", numero1);
-        }else if(numero1<0){
+         if(numero1<0){
         printf("\nEl factorial de %d no se puede realizar \n",numero1);
         }else{
         resultados = factorial(numero1);
         printf("\nEl factorial de %d es: %.2f\n", numero1, resultados);
         }
-        if(numero2=='0'){
-        printf("\nEl factorial de %d es: 1 \n", numero2);
-        }else if(numero2<0){
+        if(numero2<0){
         printf("\nEl factorial de %d no se puede realizar \n",numero2);
         }else{
         resultados = factorial(numero2);
