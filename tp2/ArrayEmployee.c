@@ -29,3 +29,10 @@ int employeeInit(eEmployee emple[],int cant)
     return retorno;
 }
 
+//int addEmployees(Employee empl[],int tam, int id, char name[],char lastName[],float salary, int sector)
+//{
+    //    int i;
+    //    int retorno;
+
+//}
+

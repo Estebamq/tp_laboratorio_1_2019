@@ -17,12 +17,13 @@ typedef struct {
 
 int menu();
 int employeeInit(eEmployee emple[],int cant);
+//int addEmployees(Employee empl[],int tam, int id, char name[],char lastName[],float salary, int sector);
 //int employeeGenId(Employee empl[],int);
 //int findEmployeeById(Employee empl[] ,int, int id);
 //int removeEmployee(Employee empl,int, int id);
 //int employeePrintOne(Employee empl[], int);
 //int printEmployees(Emlpoyee empl[],int);
-//int addEmployees(Employee empl[],int);//alta
+
 //int sortEmployees(Employee empl[],int);
 
 

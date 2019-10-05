@@ -2,12 +2,19 @@
 #include <stdlib.h>
 #include "ArrayEmployee.h"
 #define TAM 1000
+
+
 int main()
 {
     eEmployee emple[TAM];
     employeeInit(emple,TAM);
     char respuesta;
     char seguir;
+    int id;
+    char name[30];
+    char lastName[30];
+    float salary;
+    int sector;
 
     do
     {
@@ -16,7 +23,17 @@ int main()
 
         case 1:
             printf("\nALTAS empleado\n\n");
-            //int addEmployees(emple,TAM);
+            printf("ingrese el Nombre:");
+            fflush(stdin);
+            gets(name);
+            printf("Ingrese el Apellido:");
+            fflush(stdin);
+            gets(lastName);
+            printf("Ingrese el Salario:");
+            scanf("%f",&salary);
+            printf("ingrese el sector:\n1.RR.HH.\n2.Produccion\n3.Deposito\n4.Administracion\n\n Elija una opcion:");
+            scanf("%d",&sector);
+            int addEmployees(emple,TAM,id,name,lastName,salary,sector);
             system("pause");
             break;
 
