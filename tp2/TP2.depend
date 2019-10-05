@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1570242145 source:c:\users\quiroz\documents\facultad\tp2\tp2\main.c
+1570244181 source:c:\users\quiroz\documents\facultad\tp2\tp2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayEmployee.h"
 
-1570242145 c:\users\quiroz\documents\facultad\tp2\tp2\arrayemployee.h
+1570242918 c:\users\quiroz\documents\facultad\tp2\tp2\arrayemployee.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1570242145 source:c:\users\quiroz\documents\facultad\tp2\tp2\arrayemployee.c
+1570243198 source:c:\users\quiroz\documents\facultad\tp2\tp2\arrayemployee.c
 	"ArrayEmployee.h"
 

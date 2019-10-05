@@ -46,7 +46,7 @@ int addEmployees(eEmployee emple[],int tam,int id, char name[],char lastName[],f
 
         for(i=0;i<tam;i++)
             {
-                if(emple[i].isEmpty==1)
+                if(emple[i].isEmpty==LIBRE)
                     {
 
                         emple[i].id=id;
@@ -54,6 +54,7 @@ int addEmployees(eEmployee emple[],int tam,int id, char name[],char lastName[],f
                         strcpy(emple[i].lastName,lastName);
                         emple[i].salary=salary;
                         emple[i].sector=sector;
+                        emple[i].isEmpty=OCUPADO;
                         retorno=1;
 
                     }else
@@ -62,6 +63,23 @@ int addEmployees(eEmployee emple[],int tam,int id, char name[],char lastName[],f
                     }
 
             }
+    return retorno;
+}
+
+int printEmployees(eEmployee emple[],int tam)
+{
+    int i;
+    int retorno =-1;
+
+    for(i=0;i<tam;i++)
+        {
+            if(emple[i].isEmpty==OCUPADO)
+                {
+                    printf("ID     NOMBRE       APELLIDO     SALARIO     SECTOR    \n");
+                    printf("%d     %s            %s            %f          %d", emple[i].id, emple[i].name, emple[i].lastName, emple[i].salary, emple[i].sector);
+                    retorno = 0;
+                }
+        }
     return retorno;
 }
 

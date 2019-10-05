@@ -32,15 +32,15 @@ int main()
 
         case 1:
             printf("\nALTAS empleado\n\n");
-            printf("ingrese el Nombre:");
+            printf("ingrese el Nombre: ");
             fflush(stdin);
             gets(name);
-            printf("Ingrese el Apellido:");
+            printf("Ingrese el Apellido: ");
             fflush(stdin);
             gets(lastName);
-            printf("Ingrese el Salario:");
+            printf("Ingrese el Salario: ");
             scanf("%f",&salary);
-            printf("ingrese el sector:\n1.RR.HH.\n2.Produccion\n3.Deposito\n4.Administracion\n\n Elija una opcion:");
+            printf("ingrese el sector:\n1.RR.HH.\n2.Produccion\n3.Deposito\n4.Administracion\n\n Elija una opcion: ");
             scanf("%d",&sector);
             id = genId(id);
             retorno =addEmployees(emple,TAM,id,name,lastName,salary,sector);
@@ -57,37 +57,43 @@ int main()
        case 2:
             printf("\nMODIFICAR empleado\n\n");
 
-            system("pause");
+          //  system("pause");
             break;
 
         case 3:
             printf("\nBAJA empleado\n\n");
             //int removeEmployee(emple,TAM, id);
-            system("pause");
+            //system("pause");
             break;
 
         case 4:
             printf("\INFORMAR sobre Empleados\n\n");
-            //int printEmployees(emple,TAM);
-            system("pause");
+            printEmployees(emple,TAM);
+           // system("pause");
             break;
 
-        case 5:
-            printf("\nDesea salir s/n?: ");
-            fflush(stdin);
-            respuesta = getche();
-
-            if( tolower(respuesta) == 's')
-            {
-                seguir = 'n';
-            }
-            break;
 
         default:
-            printf("\n Opcion invalida\n\n");
-            system("break");
+            printf("\nDesea seguir en el programa s/n?: ");
+            fflush(stdin);
+            scanf("%s",&seguir);
+            if(seguir=='n'){
+            printf("\n Usted SALIO!");
+            }
+
+            if(seguir!='s'){
+            printf("/nOpcion incorrecta! \n");
+            }
+
+
         }
+            system("pause");
+            system("cls");
+
+
+
     } while(seguir == 's');
 
     return 0;
+
 }
