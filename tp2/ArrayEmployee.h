@@ -19,6 +19,7 @@ int menu();
 int employeeInit(eEmployee emple[],int cant);
 int addEmployees(eEmployee emple[],int tam, int id, char name[],char lastName[],float salary, int sector);
 int printEmployees(eEmployee emple[],int tam);
+int genId(int id);
 //int employeeGenId(Employee empl[],int);
 //int findEmployeeById(Employee empl[] ,int, int id);
 //int removeEmployee(Employee empl,int, int id);

@@ -1,8 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "ArrayEmployee.h"
 int menu()
 {
-    int opcion;
-
+    int opcion;;
     system("cls");
     printf("  *** ABM EMPLOYEE ***\n\n");
     printf("1- Alta Empleado\n");
@@ -30,22 +32,19 @@ int employeeInit(eEmployee emple[],int cant)
 }
 
 int genId(int id)
-    {
-        int retorno = id;
-        if(id!=1)
-            {
-                retorno=id+1;
-            }
-        return retorno;
-    }
+{
+    int retorno;
+    retorno = id +1;
+
+    return retorno;
+
+}
 
 int addEmployees(eEmployee emple[],int tam,int id, char name[],char lastName[],float salary, int sector)
 {
-        int i;
+        int i = id-1;
         int retorno =-1;
 
-        for(i=0;i<tam;i++)
-            {
                 if(emple[i].isEmpty==LIBRE)
                     {
 
@@ -55,14 +54,11 @@ int addEmployees(eEmployee emple[],int tam,int id, char name[],char lastName[],f
                         emple[i].salary=salary;
                         emple[i].sector=sector;
                         emple[i].isEmpty=OCUPADO;
-                        retorno=1;
+                        retorno=0;
 
-                    }else
-                    {
-                        printf("No se pueden ingresar mas usuarios");
                     }
 
-            }
+
     return retorno;
 }
 
@@ -70,13 +66,13 @@ int printEmployees(eEmployee emple[],int tam)
 {
     int i;
     int retorno =-1;
-
+    printf("\tID\tNOMBRE\tAPELLIDO\tSALARIO           SECTOR\t\n");
     for(i=0;i<tam;i++)
         {
             if(emple[i].isEmpty==OCUPADO)
                 {
-                    printf("ID     NOMBRE       APELLIDO     SALARIO     SECTOR    \n");
-                    printf("%d     %s            %s            %f          %d", emple[i].id, emple[i].name, emple[i].lastName, emple[i].salary, emple[i].sector);
+
+                    printf("\t%d\t%s\t%s\t%15.2f\t%15d\n", emple[i].id, emple[i].name, emple[i].lastName, emple[i].salary, emple[i].sector);
                     retorno = 0;
                 }
         }

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "ArrayEmployee.h"
 #define TAM 1000
-#define INICIA 1
+
 
 
 int main()
@@ -18,7 +18,8 @@ int main()
     employeeInit(emple,TAM);
     char respuesta;
     char seguir;
-    int id =INICIA;
+    int id=0;
+
     char name[30];
     char lastName[30];
     float salary;
@@ -31,7 +32,8 @@ int main()
         {
 
         case 1:
-            printf("\nALTAS empleado\n\n");
+            system("cls");
+            printf("\n\t***ALTA EMPLEADO***\n\n");
             printf("ingrese el Nombre: ");
             fflush(stdin);
             gets(name);
@@ -46,53 +48,53 @@ int main()
             retorno =addEmployees(emple,TAM,id,name,lastName,salary,sector);
             if(retorno!=-1)
                 {
-                    printf("El alta del empleado se realizo con exito!!!");
+                    printf("El alta del empleado se realizo con exito!!!\n");
                 }else
                 {
-                    printf("NO se pudo realizar el ALTA del empleado!!!");
+                    printf("NO se pudo realizar el ALTA del empleado!!!\n");
                 }
             system("pause");
             break;
 
        case 2:
+            system("cls");
             printf("\nMODIFICAR empleado\n\n");
 
-          //  system("pause");
+            system("pause");
             break;
 
         case 3:
+            system("cls");
             printf("\nBAJA empleado\n\n");
-            //int removeEmployee(emple,TAM, id);
-            //system("pause");
+          //int removeEmployee(emple,TAM, id);
+            system("pause");
             break;
 
         case 4:
-            printf("\INFORMAR sobre Empleados\n\n");
+            system("cls");
+            printf("\t***Lista de Empleados***\n\n");
             printEmployees(emple,TAM);
-           // system("pause");
+            system("pause");
             break;
 
 
-        default:
-            printf("\nDesea seguir en el programa s/n?: ");
+        case 5:
+            system("cls");
+            printf("\nDesea salir s/n?: ");
             fflush(stdin);
             scanf("%s",&seguir);
-            if(seguir=='n'){
-            printf("\n Usted SALIO!");
+            if(seguir=='s'){
+            printf("\n Usted SALIO!!");
             }
-
-            if(seguir!='s'){
+            break;
+        default:
             printf("/nOpcion incorrecta! \n");
-            }
-
-
-        }
             system("pause");
-            system("cls");
+            fflush(stdin);
+        }
 
 
-
-    } while(seguir == 's');
+    } while(seguir != 's');
 
     return 0;
 
